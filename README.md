@@ -29,6 +29,8 @@ This project is a REST API for managing student records using Node.js and Expres
     make run
     ```
 ### Project Structure
+```bash
+
 student-api/
 ├── index.js
 ├── knexfile.js
@@ -45,6 +47,7 @@ student-api/
 ├── .gitignore
 ├── Makefile
 └── README.md
+```
 
 ### API Endpoints
 - POST /api/v1/students: Create a student
