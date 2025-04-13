@@ -37,6 +37,18 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Get a student by ID
+router.get('/:id', async (req, res) => {
+  try {
+    const student = await Student.findById(req.params.id);
+    if (student) res.json(student);
+    else res.status(404).json({ error: 'Student not found' });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
 // Update a student
 router.put('/:id', async (req, res) => {
   try {
